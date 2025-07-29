@@ -3,24 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora  De IMC</title>
+    <title>Calculadora De IMC</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Calculadora  De IMC</h1>
-        <div class="input-group">
-            <label for="peso">Peso (kg):</label>
-            <input type="number" id="peso" placeholder="Ex: 70" step="0.1" required></input>
+    <div class="container-title">
+        <h1>Calculadora De IMC</h1>
+    </div>
+
+    <div class="main-content-wrapper">
+        <div class="container">
+            <div class="input-group">
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" placeholder="Ex: 70" step="0.1" required>
+            </div>
+            <div class="input-group">
+                <label for="altura">Altura (m):</label>
+                <input type="number" id="altura" placeholder="EX: 1.75" step="0.01" required>
+            </div>
+            <button id="calcularBtn">Calcular IMC</button>
+            <div id="resultado">
+            </div>
         </div>
-        <div class="input-group">
-            <label for="altura">Altura (m):</label>
-            <input type="number" id="altura" placeholder="EX: 1.75" step="0.01" required>
-        </div>
-        <button id="calcularBtn">Calcular IMC</button>
-        <div id="resultado">
+
+        <div class="container container-tecnologias">
+            <h2>Tecnologias Utilizadas</h2>
+            <div class="tech-list">
+                <a href="https://nodejs.org/docs/" target="_blank" aria-label="Documentação do Node.js">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js Logo">
+                    <span>Node.js</span>
+                </a>
+                <a href="https://expressjs.com/pt-br/4x/api.html" target="_blank" aria-label="Documentação do Express.js">
+                    <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4d2b1794681fcd0563fd24075b9f/topics/express/express.png" alt="Express.js Logo">
+                    <span>Express.js</span>
+                </a>
+            </div>
         </div>
     </div>
+
     <script src="script.js"></script>
+
+    <footer class="footer">
+        <p>&copy; 2025 Calculadora de IMC. Todos os direitos reservados.</p>
+        <p><a href="https://github.com/ailsonguedes" target="_blank" rel="noopener noreferrer" class="footer-credit-link">Powered By Ailson Guedes</a></p>
+    </footer>
 </body>
 </html>

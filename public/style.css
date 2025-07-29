@@ -1,0 +1,210 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILOS GLOBAIS DO BODY */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Organiza os itens (título, wrapper, rodapé) em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    padding-top: 50px;
+    gap: 30px; /* Espaçamento entre o título e o wrapper principal */
+}
+
+/* CONTAINER PARA O TÍTULO */
+.container-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-title h1 {
+    font-size: 2.5em;
+    color: #007bff;
+}
+
+/* NOVO ESTILO: Contêiner pai para calculadora e tecnologias */
+.main-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+    flex-grow: 1; /* Permite que este wrapper ocupe o espaço restante, empurrando o rodapé para baixo */
+    margin-bottom: 30px; /* Espaço entre o wrapper e o rodapé */
+}
+
+/* ESTILIZAÇÃO DO CONTÊINER PRINCIPAL (Calculadora) */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+/* NOVO ESTILO: Contêiner das Tecnologias */
+.container-tecnologias {
+    max-width: 250px;
+    padding: 30px;
+}
+
+.container-tecnologias h2 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+}
+
+.tech-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.tech-list a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.tech-list a:hover {
+    color: #007bff;
+}
+
+.tech-list img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+/* ESTILOS DOS INPUTS E BOTÃO (Mantenha como estão) */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+#calcularBtn {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1.15em;
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#calcularBtn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+#calcularBtn:active {
+    transform: translateY(0);
+}
+
+#resultado {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #e9f5ff;
+    min-height: 60px;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#resultado p {
+    margin: 5px;
+}
+
+/* --- NOVO ESTILO: RODAPÉ --- */
+.footer {
+    width: 100%;
+    background-color: #333; /* Fundo escuro para o rodapé */
+    color: #f0f2f5; /* Texto claro */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    margin-top: auto; /* Empurra o rodapé para a parte inferior quando o conteúdo é pequeno */
+}
+
+.footer p {
+    margin: 5px 0; /* Espaçamento entre os parágrafos do rodapé */
+}
+
+.footer-credit-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-credit-link:hover {
+    color: #0056b3;
+}
+
+/* Media query para responsividade em telas menores */
+@media (max-width: 768px) {
+    .main-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .container,
+    .container-tecnologias {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .container-tecnologias {
+        margin-top: 20px;
+    }
+}

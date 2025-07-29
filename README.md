@@ -33,5 +33,14 @@
 
 2. Vá no seu navegador e abra o localhost na porta indicada no seu terminal.
 
+    ```bash
+        Servidor rodando em http://localhost:3000
+        Abra esta URL no seu navegador para usar a calculadora de IMC
+    ```
 
+3. Você verá a seguinte tela no seu navegador.
+
+    <div align="center">
+        <img src="./img/app_screen.png">
+    </div>
 
