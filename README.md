@@ -41,6 +41,6 @@
 3. Você verá a seguinte tela no seu navegador.
 
     <div align="center">
-        <img src="./img/app_screen.png" width="325" height="325">
+        <img src="./img/app_screen.png" width="500" height="500">
     </div>
 
